@@ -8,11 +8,31 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        'anchors-aweigh': '#26303f',
+        'angel-hair-silver': '#d1d5db',
+        'blue-ribbon': '#0066ff',
+        'blue-steel': '#515962',
+        'coarse-wool': '#101826',
+        'dark': '#17212e',
+        'dark-e-stormy': '#374151',
+        'dark-seashore-night': '#1a338b',
+        'glowing-brake-disc': '#ef4444',
+        'great-falls': '#9ca3af',
+        'hei-se-black': '#17202e',
+        'kingly-cloud': '#dfdfdf',
+        'nouveau': '#6b7280',
+        'pool-water': '#2d8cff'
       },
+
+      backgroundImage: {
+        'blur' : "url(/Blur.png)",
+        'image-call' : "url(/ImageCall.png)",
+      },
+
+      borderWidth: {
+        '1' : '1px'
+      }
     },
   },
   plugins: [],

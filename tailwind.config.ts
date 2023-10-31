@@ -27,7 +27,7 @@ const config: Config = {
 
       backgroundImage: {
         'blur' : "url(/Blur.png)",
-        'image-call' : "url(/ImageCall.png)",
+        'radial' : 'radial-gradient(50% 50% at 50% 50%, #00A3FF 0%, #0066FF 100%)'
       },
 
       borderWidth: {

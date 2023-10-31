@@ -1,3 +1,5 @@
+"use client";
+
 import { useContext, createContext, useState, ReactNode } from "react";
 
 interface UserContextTypes {
@@ -5,7 +7,7 @@ interface UserContextTypes {
   setUserName: (userName: string) => void;
 }
 
-const UserContext = createContext<UserContextTypes | null>(null);
+const UserContext = createContext<UserContextTypes | undefined>(undefined);
 
 export const UserProvider = ({ children }: { children: ReactNode }) => {
   const [userName, setUserName] = useState<string>("");
@@ -20,7 +22,7 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
 export const useUserContext = () => {
   const context = useContext(UserContext);
 
-  if (context === undefined) {
+  if (!context) {
     throw new Error(
       "useCharacterContext must be used within a CharacterProvider",
     );

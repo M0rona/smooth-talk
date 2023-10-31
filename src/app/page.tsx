@@ -1,4 +1,5 @@
 import { Character } from "@/components/Character";
+import { SwitchRoom } from "@/components/SwitchRoom";
 import { Emphasis } from "@/components/text/Emphasis";
 import Image from "next/image";
 
@@ -14,7 +15,7 @@ export default function Home() {
 
         <Character />
 
-        <input type="text" placeholder="Alterar nome" />
+        <SwitchRoom />
       </section>
 
       <section className="flex flex-1 flex-col items-center justify-center gap-11 p-10">
@@ -32,8 +33,9 @@ export default function Home() {
           <Image
             src="/ImageCall.png"
             alt="Image call"
-            fill
-            objectFit="contain"
+            fill={true}
+            priority
+            sizes="(max-width: 1068px) 33vw"
           />
         </div>
       </section>

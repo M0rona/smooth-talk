@@ -21,7 +21,7 @@ export default function Home() {
       <section className="flex flex-1 flex-col items-center justify-center gap-11 p-10">
         <div className="flex flex-col items-center">
           <h1 className="text-center text-9xl font-bold">
-            Smooth<strong className="text-pool-water">Talk</strong>
+            Smooth <strong className="text-pool-water">Talk</strong>
           </h1>
 
           <span className="text-center text-xl font-extralight">
@@ -36,6 +36,7 @@ export default function Home() {
             fill={true}
             priority
             sizes="(max-width: 1068px) 33vw"
+            className="object-contain"
           />
         </div>
       </section>

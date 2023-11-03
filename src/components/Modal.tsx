@@ -18,10 +18,10 @@ export const Modal = ({ children, content, w }: ModalProps) => {
         <Dialog.Overlay className="fixed inset-0 bg-black/50 data-[state=closed]:animate-fadeOut data-[state=open]:animate-fadeIn" />
 
         <Dialog.Content
-          className={`fixed left-[50%] top-[50%] max-h-[85vh] ${w} translate-x-[-50%] translate-y-[-50%] rounded-xl bg-hei-se-black p-8 focus:outline-none data-[state=closed]:animate-contentHide data-[state=open]:animate-contentShow`}
+          className={`fixed left-[50%] top-[50%] max-h-[85vh] ${w} z-20 translate-x-[-50%] translate-y-[-50%] rounded-xl bg-hei-se-black p-8 focus:outline-none data-[state=closed]:animate-contentHide data-[state=open]:animate-contentShow`}
         >
           {/* X icon */}
-          <div className="flex justify-end">
+          <div className="mb-5 flex justify-end">
             <Dialog.Close className="focus:outline-none">
               <Cross1Icon />
             </Dialog.Close>

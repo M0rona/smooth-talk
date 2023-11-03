@@ -3,7 +3,7 @@
 import { useContext, createContext, useState, ReactNode } from "react";
 import { AvatarProps } from "@bigheads/core";
 
-interface CharacterContextProps {
+export interface CharacterContextProps {
   bigHeadProps: AvatarProps;
   setBigHeadProps: (bigHeadProps: AvatarProps) => void;
 }

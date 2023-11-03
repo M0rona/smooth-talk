@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import { UserProvider } from "@/contexts/User";
+import { CharacterProvider } from "@/contexts/CharacterContext";
 
-const inter = Inter({ subsets: ["latin"] });
+const mainFontFamily = Open_Sans({
+  subsets: ["latin"],
+  variable: "--font-family-main",
+});
 
 export const metadata: Metadata = {
   title: "Smooth Talk",
@@ -16,10 +20,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-br">
-      <body className={inter.className + " bg-coarse-wool text-zinc-100"}>
+    <html lang="pt-br" className={mainFontFamily.variable}>
+      <body className="bg-coarse-wool font-sans text-zinc-100">
         <UserProvider>
-          {children}
+          <CharacterProvider>{children}</CharacterProvider>
         </UserProvider>
       </body>
     </html>

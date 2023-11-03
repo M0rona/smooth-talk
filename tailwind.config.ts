@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--font-family-main)']
+      },
+
       colors: {
         'anchors-aweigh': '#26303f',
         'angel-hair-silver': '#d1d5db',

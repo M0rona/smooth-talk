@@ -7,13 +7,13 @@ type ButtonProps = ComponentProps<"button"> &
   };
 
 const button = tv({
-  base: "rounded-lg transition-colors font-semibold",
+  base: "rounded-lg transition-colors font-semibold transition-colors",
   variants: {
     size: {
       default: "p-4",
       sm: "p-2 text-xs",
       lg: "rounded-2xl p-5 text text-base font-semibold",
-      xl: "rounded-lg bg-blue-ribbon p-5 text-xl font-semibold transition-colors hover:bg-blue-700",
+      xl: "rounded-lg p-5 text-xl font-semibold ",
     },
 
     haveText: {
@@ -31,6 +31,10 @@ const button = tv({
     alert: {
       true: "bg-glowing-brake-disc hover:bg-glowing-brake-disc/80",
     },
+
+    ribbon: {
+      true: "bg-blue-ribbon hover:bg-blue-700",
+    },
   },
 
   defaultVariants: {
@@ -46,6 +50,7 @@ export const Button = ({
   primary,
   secondary,
   alert,
+  ribbon,
   ...props
 }: ButtonProps) => {
   const haveText = text != "" && text != undefined;
@@ -60,6 +65,7 @@ export const Button = ({
         primary,
         secondary,
         alert,
+        ribbon,
       })}
     >
       {text}

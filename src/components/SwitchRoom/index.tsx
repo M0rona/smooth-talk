@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from "../Button";
 import { ItemSwitch } from "./ItemSwitch";
 import { useState, ChangeEvent } from "react";
 
@@ -50,9 +51,12 @@ export const SwitchRoom = () => {
         <span>{codeRoom.length}/30</span>
       </div>
 
-      <button className="w-1/2 rounded-lg bg-blue-ribbon py-5 text-xl font-semibold transition-colors hover:bg-blue-700">
-        {isCreateRoom ? "Criar" : "Entrar"}
-      </button>
+      <Button
+        text={isCreateRoom ? "Criar" : "Entrar"}
+        size="xl"
+        className="w-1/2"
+        ribbon
+      />
     </>
   );
 };

@@ -36,6 +36,10 @@ export const ModalContent = () => {
               <Tabs.Trigger value="tab6" asChild>
                 <TabItem text="Cabelo" />
               </Tabs.Trigger>
+
+              <Tabs.Trigger value="tab7" asChild>
+                <TabItem text="Fundo" />
+              </Tabs.Trigger>
             </Tabs.List>
           </Tabs.Root>
         </section>

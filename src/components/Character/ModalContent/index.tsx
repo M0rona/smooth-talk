@@ -1,6 +1,7 @@
 import { CharacterSection } from "./CharacterSection";
 import * as Tabs from "@radix-ui/react-tabs";
-import { TabItem } from "./TabItem";
+import { TabProvider } from "./Tabs/TabProvider";
+// import { Acessory } from "./Tabs/Acessory";
 
 export const ModalContent = () => {
   return (
@@ -11,36 +12,25 @@ export const ModalContent = () => {
         </section>
 
         <section className="flex-1">
-          <Tabs.Root>
+          <Tabs.Root defaultValue="tab1">
             <Tabs.List>
-              <Tabs.Trigger value="tab1" asChild>
-                <TabItem text="Acessórios" />
-              </Tabs.Trigger>
-
-              <Tabs.Trigger value="tab2" asChild>
-                <TabItem text="Corpo" />
-              </Tabs.Trigger>
-
-              <Tabs.Trigger value="tab3" asChild>
-                <TabItem text="Tom de pele" />
-              </Tabs.Trigger>
-
-              <Tabs.Trigger value="tab4" asChild>
-                <TabItem text="Roupa" />
-              </Tabs.Trigger>
-
-              <Tabs.Trigger value="tab5" asChild>
-                <TabItem text="Rosto" />
-              </Tabs.Trigger>
-
-              <Tabs.Trigger value="tab6" asChild>
-                <TabItem text="Cabelo" />
-              </Tabs.Trigger>
-
-              <Tabs.Trigger value="tab7" asChild>
-                <TabItem text="Fundo" />
-              </Tabs.Trigger>
+              <TabProvider
+                items={[
+                  "Acessórios",
+                  "Corpo",
+                  "Tom de pele",
+                  "Roupa",
+                  "Rosto",
+                  "Cabelo",
+                  "Fundo",
+                ]}
+              />
             </Tabs.List>
+
+            <Tabs.Content value="tab1" asChild>
+              {/* <Acessory /> */}
+              <h1>Teste</h1>
+            </Tabs.Content>
           </Tabs.Root>
         </section>
       </div>

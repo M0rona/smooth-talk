@@ -7,7 +7,11 @@ interface TabItemProps {
 export const TabItem = forwardRef(
   ({ text, ...props }: TabItemProps, ref: Ref<HTMLButtonElement>) => {
     return (
-      <button ref={ref} className="p-4" {...props}>
+      <button
+        ref={ref}
+        className="rounded-xl p-4 transition-colors hover:bg-white/10"
+        {...props}
+      >
         {text}
       </button>
     );

@@ -22,7 +22,8 @@ const config: Config = {
         'hei-se-black': '#17202e',
         'kingly-cloud': '#dfdfdf',
         'nouveau': '#6b7280',
-        'pool-water': '#2d8cff'
+        'pool-water': '#2d8cff',
+        'outline': '#4B5563'
       },
 
       backgroundImage: {

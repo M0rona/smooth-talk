@@ -7,6 +7,7 @@ import { ModalContent } from "./ModalContent";
 import { BigHeadCharacter } from "./BigHeadCharacter";
 import { useCharacterContext } from "@/contexts/CharacterContext";
 import { RamdomCharacter } from "@/hooks/RadomCharacter";
+import { Skeleton } from "../Skeleton";
 
 export const Character = () => {
   const { setUserName } = useUserContext();
@@ -19,8 +20,10 @@ export const Character = () => {
   return (
     <div className="flex flex-col items-center gap-6">
       <Modal content={<ModalContent />} w="w-fit">
-        {Object.keys(bigHeadProps).length && (
+        {Object.keys(bigHeadProps).length ? (
           <BigHeadCharacter hover characteristics={bigHeadProps} />
+        ) : (
+          <Skeleton className="h-56 min-h-[14rem] w-56 rounded-full" />
         )}
       </Modal>
 

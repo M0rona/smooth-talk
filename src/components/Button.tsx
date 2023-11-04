@@ -1,13 +1,16 @@
 import { ComponentProps } from "react";
 import { tv, VariantProps } from "tailwind-variants";
+import * as RadixIcon from "@radix-ui/react-icons";
 
 type ButtonProps = ComponentProps<"button"> &
   VariantProps<typeof button> & {
     text?: string;
+    iconRight?: keyof typeof RadixIcon;
+    iconLeft?: keyof typeof RadixIcon;
   };
 
 const button = tv({
-  base: "rounded-lg transition-colors font-semibold transition-colors",
+  base: "flex items-center justify-center gap-3 rounded-lg transition-colors font-semibold transition-colors",
   variants: {
     size: {
       default: "p-4",
@@ -51,9 +54,13 @@ export const Button = ({
   secondary,
   alert,
   ribbon,
+  iconRight,
+  iconLeft,
   ...props
 }: ButtonProps) => {
   const haveText = text != "" && text != undefined;
+  const IconRight = iconRight && RadixIcon[iconRight];
+  const IconLeft = iconLeft && RadixIcon[iconLeft];
 
   return (
     <button
@@ -68,7 +75,9 @@ export const Button = ({
         ribbon,
       })}
     >
+      {IconLeft && <IconLeft />}
       {text}
+      {IconRight && <IconRight />}
     </button>
   );
 };

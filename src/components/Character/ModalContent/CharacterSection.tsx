@@ -15,6 +15,7 @@ export const CharacterSection = () => {
       <Button
         text="Aleatório"
         secondary
+        iconLeft="ShuffleIcon"
         onClick={() => RamdomCharacter(setBigHead)}
       />
     </>

@@ -2,13 +2,14 @@ import { Content } from "@radix-ui/react-tabs";
 
 interface ContentProviderProps {
   items: JSX.Element[];
+  prefix: string;
 }
 
-export const ContentProvider = ({ items }: ContentProviderProps) => {
+export const ContentProvider = ({ items, prefix }: ContentProviderProps) => {
   return (
     <>
       {items.map((item, i) => (
-        <Content key={i} value={`tab${i + 1}`}>
+        <Content key={item.key} value={`${prefix}-${i + 1}`} className="p-5">
           {item}
         </Content>
       ))}

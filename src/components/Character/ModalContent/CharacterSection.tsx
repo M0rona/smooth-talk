@@ -10,7 +10,7 @@ export const CharacterSection = () => {
 
   return (
     <>
-      <BigHeadCharacter characteristics={bigHead} />
+      <BigHeadCharacter w="w-full" characteristics={bigHead} />
 
       <Button
         text="Aleatório"

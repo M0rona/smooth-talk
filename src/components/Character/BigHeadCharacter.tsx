@@ -4,17 +4,18 @@ import { BigHead, AvatarProps } from "@bigheads/core";
 interface BigHeadProps {
   hover?: boolean;
   characteristics: AvatarProps;
+  w: string;
 }
 
 export const BigHeadCharacter = forwardRef(
   (
-    { hover, characteristics, ...props }: BigHeadProps,
+    { hover, characteristics, w, ...props }: BigHeadProps,
     ref: Ref<HTMLDivElement>,
   ) => {
     return (
       <div
         ref={ref} // Passando a referência para o elemento div
-        className="relative h-56 min-h-[14rem] w-56 overflow-hidden rounded-full bg-radial"
+        className={`relative ${w} overflow-hidden rounded-full bg-radial`}
         {...props}
       >
         <div className="scale-105">

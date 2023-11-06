@@ -19,9 +19,9 @@ export const Character = () => {
 
   return (
     <div className="flex flex-col items-center gap-6">
-      <Modal content={<ModalContent />} w="w-fit">
+      <Modal content={<ModalContent />} w="w-[55vw]">
         {Object.keys(bigHeadProps).length ? (
-          <BigHeadCharacter hover characteristics={bigHeadProps} />
+          <BigHeadCharacter hover w="w-56" characteristics={bigHeadProps} />
         ) : (
           <Skeleton className="h-56 min-h-[14rem] w-56 rounded-full" />
         )}

@@ -7,7 +7,7 @@ import { Hat } from "./SubTabs/Hat";
 export const Accessory = () => {
   return (
     <Root defaultValue="subtab-1">
-      <List>
+      <List className="flex justify-center">
         <TabProvider
           prefix="subtab"
           items={["Máscaras faciais", "Chápeus"]}

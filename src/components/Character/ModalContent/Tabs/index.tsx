@@ -6,7 +6,7 @@ import { Body } from "./Body";
 
 export const Tabs = () => {
   return (
-    <Root defaultValue="tab-1">
+    <Root defaultValue="tab-1" orientation="vertical">
       <List>
         <TabProvider
           prefix="tab"

@@ -1,13 +1,13 @@
 import { Root, List } from "@radix-ui/react-tabs";
-import { TabProvider } from "../TabProvider";
-import { ContentProvider } from "../ContentProvider";
+import { TabProvider } from "../../../../TabProvider";
+import { ContentProvider } from "../../../../ContentProvider";
 import { FaceMask } from "./SubTabs/FaceMask";
 import { Hat } from "./SubTabs/Hat";
 
 export const Accessory = () => {
   return (
     <Root defaultValue="subtab-1">
-      <List className="flex justify-center">
+      <List className="flex justify-center gap-3">
         <TabProvider
           prefix="subtab"
           items={["Máscaras faciais", "Chápeus"]}

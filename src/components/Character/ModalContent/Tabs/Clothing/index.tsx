@@ -1,19 +1,22 @@
 import { Root, List } from "@radix-ui/react-tabs";
 import { TabProvider } from "../../../../TabProvider";
 import { ContentProvider } from "../../../../ContentProvider";
-import { ItemsBody } from "./SubTabs/ItemsBody";
-import { SkinTone } from "../SkinTone";
+import { ItemsClothing } from "./SubTabs/ItemsClothing";
+import { Graphic } from "./SubTabs/Graphic";
 
-export const Body = () => {
+export const Clothing = () => {
   return (
     <Root defaultValue="subtab-1">
       <List className="flex justify-center gap-3">
-        <TabProvider prefix="subtab" items={["Items", "Tom de pele"]} sub />
+        <TabProvider prefix="subtab" items={["Items", "Estampa"]} sub />
       </List>
 
       <ContentProvider
         prefix="subtab"
-        items={[<ItemsBody key="itemsbody" />, <SkinTone key="skintone" />]}
+        items={[
+          <ItemsClothing key="itemsclothing" />,
+          <Graphic key="graphic" />,
+        ]}
       />
     </Root>
   );

@@ -6,10 +6,10 @@ import { Button } from "@/components/Button";
 interface ModalProps {
   children: ReactNode;
   content: JSX.Element;
-  w: string;
+  className: string;
 }
 
-export const Modal = ({ children, content, w }: ModalProps) => {
+export const Modal = ({ children, content, className }: ModalProps) => {
   return (
     <Dialog.Root>
       <Dialog.Trigger asChild>{children}</Dialog.Trigger>
@@ -18,7 +18,7 @@ export const Modal = ({ children, content, w }: ModalProps) => {
         <Dialog.Overlay className="fixed inset-0 bg-black/50 data-[state=closed]:animate-fadeOut data-[state=open]:animate-fadeIn" />
 
         <Dialog.Content
-          className={`fixed left-[50%] top-[50%] max-h-[85vh] ${w} z-20 translate-x-[-50%] translate-y-[-50%] rounded-xl bg-hei-se-black p-8 focus:outline-none data-[state=closed]:animate-contentHide data-[state=open]:animate-contentShow`}
+          className={`fixed left-[50%] top-[50%] flex max-h-[85vh] flex-col ${className} z-20 translate-x-[-50%] translate-y-[-50%] rounded-xl bg-hei-se-black p-8 focus:outline-none data-[state=closed]:animate-contentHide data-[state=open]:animate-contentShow`}
         >
           {/* X icon */}
           <div className="mb-5 flex justify-end">
@@ -28,7 +28,7 @@ export const Modal = ({ children, content, w }: ModalProps) => {
           </div>
 
           {/* Content */}
-          <div className="h-full">{content}</div>
+          <div className="flex-1">{content}</div>
 
           <footer className="mt-4 flex justify-end gap-5">
             <Dialog.Close asChild>

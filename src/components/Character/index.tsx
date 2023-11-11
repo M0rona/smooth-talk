@@ -19,7 +19,7 @@ export const Character = () => {
 
   return (
     <div className="flex flex-col items-center gap-6">
-      <Modal content={<ModalContent />} w="w-[55vw]">
+      <Modal content={<ModalContent />} className="h-[85vh] w-[63rem]">
         {Object.keys(bigHeadProps).length ? (
           <BigHeadCharacter hover w="w-56" characteristics={bigHeadProps} />
         ) : (

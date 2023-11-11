@@ -10,10 +10,10 @@ interface TabProviderProps {
 }
 
 const triggerClass = tv({
-  base: "ml-2 rounded-xl p-4 transition-colors first:ml-0 hover:bg-white/10",
+  base: "transition-all text-sm p-4 rounded-lg hover:data-[state=inactive]:text-pool-water",
   variants: {
     sub: {
-      true: "data-[state=active]:border-b-4 data-[state=active]:border-b-pool-water data-[state=active]:bg-blue-ribbon/40",
+      true: "data-[state=active]:border-b-pool-water data-[state=active]:text-pool-water data-[state=active]:bg-coarse-wool",
       undefined: "data-[state=active]:bg-pool-water",
     },
   },

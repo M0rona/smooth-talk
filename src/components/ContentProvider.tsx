@@ -9,7 +9,7 @@ export const ContentProvider = ({ items, prefix }: ContentProviderProps) => {
   return (
     <>
       {items.map((item, i) => (
-        <Content key={item.key} value={`${prefix}-${i + 1}`} className="p-5">
+        <Content key={item.key} value={`${prefix}-${i + 1}`} className="flex-1">
           {item}
         </Content>
       ))}

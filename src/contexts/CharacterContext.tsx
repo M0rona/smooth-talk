@@ -1,7 +1,7 @@
 "use client";
 
 import { useContext, createContext, useState, ReactNode } from "react";
-import { AvatarProps } from "@bigheads/core";
+import { AvatarProps } from "@/BigHeads";
 
 export interface CharacterContextProps {
   bigHeadProps: AvatarProps;

@@ -1,18 +1,34 @@
+import { Root, List } from "@radix-ui/react-tabs";
 import { CharacterSection } from "./CharacterSection";
 import { Tabs } from "./Tabs";
+import { TabProvider } from "@/components/TabProvider";
 
 export const ModalContent = () => {
   return (
-    <>
-      <div className="flex h-full gap-10">
-        <section className="flex w-2/4 flex-col items-center justify-center gap-5">
-          <CharacterSection />
-        </section>
+    <Root defaultValue="tab-1" orientation="vertical" className="flex gap-10">
+      <section className="flex flex-col gap-5">
+        <CharacterSection />
 
-        <section className="w-full">
-          <Tabs />
-        </section>
-      </div>
-    </>
+        <List className="flex flex-col justify-center">
+          <TabProvider
+            prefix="tab"
+            items={[
+              "Acessório",
+              "Corpo",
+              "Tom de pele",
+              "Roupa",
+              "Rosto",
+              "Cabelo",
+              "Fundo",
+            ]}
+            className="w-full"
+          />
+        </List>
+      </section>
+
+      <section>
+        <Tabs />
+      </section>
+    </Root>
   );
 };

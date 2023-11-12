@@ -1,9 +1,17 @@
-interface CharacterItemProps {}
+import { ReactNode } from "react";
 
-export const CharacterItem = ({}: CharacterItemProps) => {
+interface CharacterItemProps {
+  children: ReactNode;
+}
+
+export const CharacterItem = ({ children }: CharacterItemProps) => {
   return (
-    <>
-      <h1>CharacterItem</h1>
-    </>
+    <div className="pointer w-28 cursor-pointer rounded-lg p-5 hover:bg-anchors-aweigh">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="240 550 520 215">
+        {children}
+      </svg>
+
+      <span>{}</span>
+    </div>
   );
 };

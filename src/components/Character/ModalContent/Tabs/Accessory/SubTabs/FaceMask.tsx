@@ -1,10 +1,20 @@
 import { CharacterItem } from "@/components/CharacterItem";
+import {
+  FaceMask as MaskItems,
+  FaceMaskProps,
+} from "@/BigHeads/components/FaceMask";
+import { Characteristics } from "@/hooks/Characteristics";
 
 export const FaceMask = () => {
   return (
     <>
-      <h1>FaceMask</h1>
-      <CharacterItem />
+      {Characteristics.faceMaskColor.map((color) => {
+        return (
+          <CharacterItem key={color}>
+            <MaskItems color={color as FaceMaskProps["color"]} />
+          </CharacterItem>
+        );
+      })}
     </>
   );
 };

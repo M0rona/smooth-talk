@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { useUserContext } from "@/contexts/User";
 import { Modal } from "../Modal";
 import { ModalContent } from "./ModalContent";
-import { BigHeadCharacter } from "./BigHeadCharacter";
+import { BigHeadCharacter } from "../BigHeadCharacter";
 import { useCharacterContext } from "@/contexts/CharacterContext";
 import { RamdomCharacter } from "@/hooks/RadomCharacter";
 import { Skeleton } from "../Skeleton";
@@ -19,9 +19,13 @@ export const Character = () => {
 
   return (
     <div className="flex flex-col items-center gap-6">
-      <Modal content={<ModalContent />} className="h-[85vh] w-[63rem]">
+      <Modal content={<ModalContent />} className="w-[63rem]">
         {Object.keys(bigHeadProps).length ? (
-          <BigHeadCharacter hover w="w-56" characteristics={bigHeadProps} />
+          <BigHeadCharacter
+            hover
+            className="w-56"
+            characteristics={bigHeadProps}
+          />
         ) : (
           <Skeleton className="h-56 min-h-[14rem] w-56 rounded-full" />
         )}

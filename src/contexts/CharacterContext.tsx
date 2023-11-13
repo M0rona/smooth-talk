@@ -6,6 +6,8 @@ import { AvatarProps } from "@/BigHeads";
 export interface CharacterContextProps {
   bigHeadProps: AvatarProps;
   setBigHeadProps: (bigHeadProps: AvatarProps) => void;
+  bigHeadRiding: AvatarProps;
+  setBigHeadRiding: (bigHeadRiding: AvatarProps) => void;
 }
 
 const CharacterContext = createContext<CharacterContextProps | undefined>(
@@ -14,9 +16,12 @@ const CharacterContext = createContext<CharacterContextProps | undefined>(
 
 export const CharacterProvider = ({ children }: { children: ReactNode }) => {
   const [bigHeadProps, setBigHeadProps] = useState<AvatarProps>({});
+  const [bigHeadRiding, setBigHeadRiding] = useState<AvatarProps>({});
 
   return (
-    <CharacterContext.Provider value={{ bigHeadProps, setBigHeadProps }}>
+    <CharacterContext.Provider
+      value={{ bigHeadProps, setBigHeadProps, bigHeadRiding, setBigHeadRiding }}
+    >
       {children}
     </CharacterContext.Provider>
   );

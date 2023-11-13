@@ -26,7 +26,7 @@ export const ModalContent = () => {
         </List>
       </section>
 
-      <section>
+      <section className="flex-1">
         <Tabs />
       </section>
     </Root>

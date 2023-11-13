@@ -12,7 +12,7 @@ export const ContentProvider = ({ items, prefix }: ContentProviderProps) => {
         <Content
           key={item.key}
           value={`${prefix}-${i + 1}`}
-          className="flex-1 p-2"
+          className="flex flex-wrap gap-2 p-2 data-[state=inactive]:hidden"
         >
           {item}
         </Content>

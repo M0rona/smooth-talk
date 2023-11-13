@@ -6,7 +6,7 @@ import { Graphic } from "./SubTabs/Graphic";
 
 export const Clothing = () => {
   return (
-    <Root defaultValue="subtab-1">
+    <Root defaultValue="subtab-1" className="w-full">
       <List className="flex justify-center gap-3">
         <TabProvider prefix="subtab" items={["Items", "Estampa"]} sub />
       </List>

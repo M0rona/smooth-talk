@@ -1,5 +1,5 @@
+import { motion } from "framer-motion";
 import { ReactNode } from "react";
-import * as Dialog from "@radix-ui/react-dialog";
 
 interface MoreItemsProps {
   children: ReactNode;
@@ -7,12 +7,13 @@ interface MoreItemsProps {
 
 export const MoreItems = ({ children }: MoreItemsProps) => {
   return (
-    <Dialog.Root>
-      <Dialog.Trigger asChild>{children}</Dialog.Trigger>
-
-      <Dialog.Portal>
-        <Dialog.Content className="absolute rounded-xl bg-hei-se-black p-8 focus:outline-none data-[state=closed]:animate-contentHide data-[state=open]:animate-contentShow"></Dialog.Content>
-      </Dialog.Portal>
-    </Dialog.Root>
+    <motion.div
+      className="absolute -bottom-28 left-0 flex gap-2 rounded bg-coarse-wool p-3"
+      initial={{ opacity: 0, scale: 0.96 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.96 }}
+    >
+      {children}
+    </motion.div>
   );
 };

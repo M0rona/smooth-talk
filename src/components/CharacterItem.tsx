@@ -32,15 +32,12 @@ export const CharacterItem = forwardRef(
     ref: Ref<HTMLDivElement>,
   ) => {
     const setActive = tv({
-      base: "pointer flex w-24 h-24 cursor-pointer flex-col items-center justify-center gap-3 rounded-lg p-4 transition-colors",
+      base: "relative pointer flex w-24 h-24 cursor-pointer flex-col items-center justify-center gap-3 rounded-lg p-4 transition-colors",
       variants: {
         active: {
           true: "bg-pool-water",
           false: "hover:bg-anchors-aweigh",
           undefined: "hover:bg-anchors-aweigh",
-        },
-        isSubComponent: {
-          true: "relative",
         },
         more: {
           true: "w-20 h-20 text-xs p-3",
@@ -48,14 +45,8 @@ export const CharacterItem = forwardRef(
       },
     });
 
-    const isSubComponent = isValidElement(sub);
-
     return (
-      <div
-        className={setActive({ active, isSubComponent, more })}
-        ref={ref}
-        {...props}
-      >
+      <div className={setActive({ active, more })} ref={ref} {...props}>
         {!children && (
           <>
             <Cross1Icon width={25} height={25} />

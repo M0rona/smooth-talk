@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Button } from "@/components/Button";
 import { BigHeadCharacter } from "../../BigHeadCharacter";
 import { useCharacterContext } from "@/contexts/CharacterContext";
-import { RamdomCharacter } from "@/hooks/RadomCharacter";
+import { RamdomCharacter } from "@/utils/RadomCharacter";
 
 export const CharacterSection = () => {
   const { bigHeadProps, bigHeadRiding, setBigHeadRiding } =

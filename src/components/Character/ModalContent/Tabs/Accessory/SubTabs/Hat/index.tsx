@@ -7,9 +7,19 @@ import { BeanieItem } from "./BeanieItem";
 export const Hat = () => {
   const { bigHeadRiding, setBigHeadRiding } = useCharacterContext();
 
+  const removeHat = () => {
+    const bigHeads = { ...bigHeadRiding };
+    bigHeads.hat = "none";
+    setBigHeadRiding(bigHeads);
+  };
+
   return (
     <>
-      <CharacterItem text="Sem" active={true} />
+      <CharacterItem
+        text="Sem"
+        active={bigHeadRiding.hat == "none"}
+        onClick={removeHat}
+      />
 
       <BeanieItem />
 
@@ -17,7 +27,7 @@ export const Hat = () => {
         text={Characteristics.hat.text[1]}
         viewBox="170 92 615 450"
       >
-        <Turban color="blue" />
+        <Turban color="white" />
       </CharacterItem>
     </>
   );

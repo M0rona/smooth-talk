@@ -12,15 +12,7 @@ export const ModalContent = () => {
         <List className="flex flex-col justify-center">
           <TabProvider
             prefix="tab"
-            items={[
-              "Acessório",
-              "Corpo",
-              "Tom de pele",
-              "Roupa",
-              "Rosto",
-              "Cabelo",
-              "Fundo",
-            ]}
+            items={["Acessório", "Corpo", "Roupa", "Rosto", "Cabelo", "Fundo"]}
             className="w-full"
           />
         </List>

@@ -1,10 +1,4 @@
-import {
-  forwardRef,
-  Ref,
-  ReactNode,
-  DOMAttributes,
-  isValidElement,
-} from "react";
+import { forwardRef, Ref, ReactNode, DOMAttributes } from "react";
 import { Cross1Icon } from "@radix-ui/react-icons";
 import { tv } from "tailwind-variants";
 import { AnimatePresence } from "framer-motion";
@@ -36,8 +30,8 @@ export const CharacterItem = forwardRef(
       variants: {
         active: {
           true: "bg-pool-water",
-          false: "hover:bg-anchors-aweigh",
-          undefined: "hover:bg-anchors-aweigh",
+          false: "data-[moreitems=closed]:hover:bg-anchors-aweigh",
+          undefined: "data-[moreitems=closed]:hover:bg-anchors-aweigh",
         },
         more: {
           true: "w-20 h-20 text-xs p-3",
@@ -46,7 +40,12 @@ export const CharacterItem = forwardRef(
     });
 
     return (
-      <div className={setActive({ active, more })} ref={ref} {...props}>
+      <div
+        className={setActive({ active, more })}
+        ref={ref}
+        data-moreitems={sub ? "open" : "closed"}
+        {...props}
+      >
         {!children && (
           <>
             <Cross1Icon width={25} height={25} />

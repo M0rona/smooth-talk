@@ -48,7 +48,7 @@ export const Characteristics = {
         text: ['Loiro', 'Laranja', 'Preto', 'Branco', 'Marrom', 'Azul', 'Rosa']
     },
     hat: {
-        name: ['beanie', 'turban'],
+        name: ['none', 'beanie', 'turban'],
         text: ['Gorro', 'Turbante']
     },
     hatColor: {

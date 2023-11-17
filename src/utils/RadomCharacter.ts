@@ -1,5 +1,5 @@
 import { AvatarProps } from "@/BigHeads";
-import { Characteristics } from "../utils/Characteristics";
+import { Characteristics } from "./Characteristics";
 
 export const RamdomCharacter = (
   setBigHeadProps: (bigHeadProps: AvatarProps) => void

@@ -6,7 +6,7 @@ import { Modal } from "../Modal";
 import { ModalContent } from "./ModalContent";
 import { BigHeadCharacter } from "../BigHeadCharacter";
 import { useCharacterContext } from "@/contexts/CharacterContext";
-import { RamdomCharacter } from "@/hooks/RadomCharacter";
+import { RamdomCharacter } from "@/utils/RadomCharacter";
 import { Skeleton } from "../Skeleton";
 
 export const Character = () => {

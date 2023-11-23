@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Button } from "@/components/Button";
 import { BigHeadCharacter } from "../../BigHeadCharacter";
 import { useCharacterContext } from "@/contexts/CharacterContext";
-import { RamdomCharacter } from "@/utils/RadomCharacter";
+import { ramdomCharacter } from "@/utils/radomCharacter";
 
 export const CharacterSection = () => {
   const { bigHeadProps, bigHeadRiding, setBigHeadRiding } =
@@ -21,7 +21,7 @@ export const CharacterSection = () => {
         size="default"
         iconLeft="ShuffleIcon"
         className="absolute -right-5 -top-5 rounded-full"
-        onClick={() => RamdomCharacter(setBigHeadRiding)}
+        onClick={() => ramdomCharacter(setBigHeadRiding)}
       />
     </div>
   );

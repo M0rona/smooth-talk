@@ -1,4 +1,4 @@
-export const Characteristics = {
+export const characteristics = {
     accessory: {
         name: ['none', 'roundGlasses', 'tinyGlasses', 'shades'],
         text: ['Não', 'Redondos', 'Minúsculos', 'Escuros']

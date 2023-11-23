@@ -1,15 +1,15 @@
 import { AvatarProps } from "@/BigHeads";
-import { Characteristics } from "./Characteristics";
+import { characteristics } from "./characteristics";
 
-export const RamdomCharacter = (
+export const ramdomCharacter = (
   setBigHeadProps: (bigHeadProps: AvatarProps) => void
 ) => {
-    type CharacteristicKey = keyof typeof Characteristics;
+    type CharacteristicKey = keyof typeof characteristics;
 
     const randomCharacter: Record<CharacteristicKey, string | boolean> = {} as any;
 
-    for (const key in Characteristics) {
-        const values = Characteristics[key as CharacteristicKey].name;
+    for (const key in characteristics) {
+        const values = characteristics[key as CharacteristicKey].name;
         const randomValue = values[Math.floor(Math.random() * values.length)];
         randomCharacter[key as CharacteristicKey] = randomValue;
     }

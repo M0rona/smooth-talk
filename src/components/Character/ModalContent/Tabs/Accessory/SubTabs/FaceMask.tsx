@@ -3,7 +3,7 @@ import {
   FaceMask as MaskItems,
   FaceMaskProps,
 } from "@/BigHeads/components/FaceMask";
-import { Characteristics } from "@/utils/Characteristics";
+import { characteristics } from "@/utils/characteristics";
 import { useCharacterContext } from "@/contexts/CharacterContext";
 
 export const FaceMask = () => {
@@ -30,12 +30,12 @@ export const FaceMask = () => {
         onClick={removeMask}
       />
 
-      {Characteristics.faceMaskColor.name.map((color, i) => {
+      {characteristics.faceMaskColor.name.map((color, i) => {
         return (
           <CharacterItem
             key={color}
             viewBox="240 550 520 215"
-            text={Characteristics.faceMaskColor.text[i]}
+            text={characteristics.faceMaskColor.text[i]}
             active={
               bigHeadRiding.faceMask && bigHeadRiding.faceMaskColor == color
             }

@@ -6,7 +6,7 @@ import { Modal } from "../Modal";
 import { ModalContent } from "./ModalContent";
 import { BigHeadCharacter } from "../BigHeadCharacter";
 import { useCharacterContext } from "@/contexts/CharacterContext";
-import { RamdomCharacter } from "@/utils/RadomCharacter";
+import { ramdomCharacter } from "@/utils/radomCharacter";
 import { Skeleton } from "../Skeleton";
 
 export const Character = () => {
@@ -14,7 +14,7 @@ export const Character = () => {
   const { bigHeadProps, setBigHeadProps } = useCharacterContext();
 
   useEffect(() => {
-    RamdomCharacter(setBigHeadProps);
+    ramdomCharacter(setBigHeadProps);
   }, []);
 
   return (

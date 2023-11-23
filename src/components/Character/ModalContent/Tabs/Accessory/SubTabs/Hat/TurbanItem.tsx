@@ -1,34 +1,34 @@
-import { useState, useMemo, MouseEventHandler } from "react";
-import { Front } from "@/BigHeads/components/hats/Beanie";
-import { ClothingProps } from "@/BigHeads/components/clothing/types";
+import { useMemo, useState } from "react";
 import { CharacterItem } from "@/components/CharacterItem";
-import { MoreItems } from "@/components/MoreItems";
+import { Front } from "@/BigHeads/components/hats/Turban";
 import { characteristics } from "@/utils/characteristics";
 import { useCharacterContext } from "@/contexts/CharacterContext";
 import { onOpenMore } from "@/utils/onOpenMore";
+import { ClothingProps } from "@/BigHeads/components/clothing/types";
+import { MoreItems } from "@/components/MoreItems";
 
-export const BeanieItem = () => {
+export const TurbanItem = () => {
   const [openMore, setOpenMore] = useState<boolean>(false);
   const { bigHeadRiding, setBigHeadRiding } = useCharacterContext();
 
-  const beanieColor = useMemo(() => {
-    if (bigHeadRiding.hat == "beanie") {
+  const turbanColor = useMemo(() => {
+    if (bigHeadRiding.hat == "turban") {
       return bigHeadRiding.hatColor as ClothingProps["color"];
     }
   }, [bigHeadRiding.hat, bigHeadRiding.hatColor]);
 
   const changeBeanie = (color: ClothingProps["color"]) => {
     const bigHeads = { ...bigHeadRiding };
-    bigHeads.hat = "beanie";
+    bigHeads.hat = "turban";
     bigHeads.hatColor = color;
     setBigHeadRiding(bigHeads);
   };
 
   return (
     <CharacterItem
-      text={characteristics.hat.text[0]}
-      viewBox="200 100 600 400"
-      active={bigHeadRiding.hat == "beanie"}
+      text={characteristics.hat.text[1]}
+      viewBox="170 92 615 450"
+      active={bigHeadRiding.hat == "turban"}
       sub={
         openMore && (
           <MoreItems setClose={setOpenMore}>
@@ -37,7 +37,7 @@ export const BeanieItem = () => {
                 <CharacterItem
                   viewBox="200 100 600 400"
                   text={characteristics.hatColor.text[index]}
-                  active={name == beanieColor}
+                  active={name == turbanColor}
                   onClick={() => changeBeanie(name as ClothingProps["color"])}
                   key={name}
                   more
@@ -51,7 +51,7 @@ export const BeanieItem = () => {
       }
       onClick={(e) => onOpenMore(e, setOpenMore)}
     >
-      <Front color={beanieColor ? beanieColor : "white"} />
+      <Front color={turbanColor ? turbanColor : "white"} />
     </CharacterItem>
   );
 };

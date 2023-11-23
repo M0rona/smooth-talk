@@ -1,4 +1,4 @@
-import { RemoveSpecials } from "@/utils/RemoveSpecials";
+import { removeSpecials } from "@/utils/RemoveSpecials";
 import { Trigger } from "@radix-ui/react-tabs";
 import { tv } from "tailwind-variants";
 
@@ -31,7 +31,7 @@ export const TabProvider = ({
         <Trigger
           className={triggerClass({ className, sub })}
           value={`${prefix}-${i + 1}`}
-          key={RemoveSpecials(item.toLowerCase())}
+          key={removeSpecials(item.toLowerCase())}
         >
           {item}
         </Trigger>

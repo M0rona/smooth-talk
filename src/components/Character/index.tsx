@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { useUserContext } from "@/contexts/User";
+import { useUserContext } from "@/contexts/UserContext";
 import { Modal } from "../Modal";
 import { ModalContent } from "./ModalContent";
 import { BigHeadCharacter } from "../BigHeadCharacter";

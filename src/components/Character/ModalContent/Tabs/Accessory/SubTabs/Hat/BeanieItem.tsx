@@ -1,4 +1,4 @@
-import { useState, useMemo, MouseEventHandler } from "react";
+import { useState, useMemo } from "react";
 import { Front } from "@/BigHeads/components/hats/Beanie";
 import { ClothingProps } from "@/BigHeads/components/clothing/types";
 import { CharacterItem } from "@/components/CharacterItem";

@@ -10,7 +10,7 @@ export const ItemsBody = () => {
         text={characteristics.body.text[0]}
         viewBox="355 825 290 140"
       >
-        <Breasts clothingColor="white" braStraps />
+        <Breasts clothingColor="white" braStraps={false} />
       </CharacterItem>
     </>
   );

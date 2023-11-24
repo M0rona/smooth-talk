@@ -1,6 +1,7 @@
 import { Character } from "@/components/Character";
 import { SwitchRoom } from "@/components/SwitchRoom";
 import { Emphasis } from "@/components/text/Emphasis";
+import { UserProviders } from "@/providers";
 import Image from "next/image";
 
 export default function Home() {
@@ -13,7 +14,9 @@ export default function Home() {
           assertivas
         </h2>
 
-        <Character />
+        <UserProviders>
+          <Character />
+        </UserProviders>
 
         <SwitchRoom />
       </section>

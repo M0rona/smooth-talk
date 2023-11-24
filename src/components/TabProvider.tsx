@@ -1,4 +1,4 @@
-import { removeSpecials } from "@/utils/RemoveSpecials";
+import { removeSpecials } from "@/utils/removeSpecials";
 import { Trigger } from "@radix-ui/react-tabs";
 import { tv } from "tailwind-variants";
 

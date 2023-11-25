@@ -10,6 +10,8 @@ export const CharacterSection = () => {
 
   useEffect(() => {
     setBigHeadRiding(bigHeadProps);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

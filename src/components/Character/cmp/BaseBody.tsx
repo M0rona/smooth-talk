@@ -2,7 +2,7 @@ interface BaseBodyProps {}
 
 export const BaseBody = ({}: BaseBodyProps) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="300 750 395 330">
+    // <svg xmlns="http://www.w3.org/2000/svg" viewBox="300 750 395 330">
       <g>
         <path
           d="M610,758.72c90.76,0,72,114.24,72.87,241.28H610Z"
@@ -68,6 +68,6 @@ export const BaseBody = ({}: BaseBodyProps) => {
           fill="#592d3d"
         />
       </g>
-    </svg>
+    // </svg>
   );
 };
